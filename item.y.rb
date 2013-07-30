@@ -26,11 +26,14 @@ def make_tokens str
   return result
 end
 
----- inner
 attr_accessor :result
 
 def parse(str)
   @result = Catalog.new
   @tokens = make_tokens str
   do_parse
+end
+
+def next_token
+ @tokens.shift
 end
