@@ -19,7 +19,7 @@ def make_tokens str
       when match = scanner.scan(/\w+/)
         result << [:WORD, match]
       else
-        raise "can't recognize  <#{scanner.peek(5)}>"
+        raise "can't recognize <#{scanner.peek(5)}>"
     end
   end
   result << [false, false]
