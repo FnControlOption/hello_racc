@@ -10,7 +10,7 @@ def make_tokens str
   require 'strscan'
   result = []
   scanner = StringScanner.new str
-  until scanner.empty?
+  until scanner.eos?
     case
       when scanner.scan(/\s+/)
         #ignore whitespace
